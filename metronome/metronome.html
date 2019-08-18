@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+</head>
+
+<body onkeydown="handleKey(event)">
+  <center>
+    <h1>Metronome</h1>
+    <div id="metronomeBox">
+      <button type="button" id="playButton" onclick="togglePlay()">Start</button>
+      <p style="vertical-align:center">
+	<button class="tempoButton" style="float:left" onclick="increaseTempo(-5)">&lt&lt</button>
+	<button class="tempoButton" style="float:left" onclick="increaseTempo(-1)">&lt</button>
+	<center id="tempoLabel">120</center>
+	<button class="tempoButton" style="float:right; margin:2px; margin-right:0px" class="tempoButton"  onclick="increaseTempo(5)">&gt&gt</button>
+	<button class="tempoButton" style="float:right; margin:2px" class="tempoButton" onclick="increaseTempo(1)">&gt</button>
+      </p>
+
+      <input id="tempoSlider" type="range" onchange="onSliderChange(this.value)" oninput="onSliderChange(this.value)" min="10" max="300" value="120"/>
+
+    <div style="text-align:left; margin-top:4pt">
+      Meter: <select id="meterSelect" onchange="setMeter(this.value)">
+	<option selected value="none">None</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option> </select>
+    </div>
+
+    <div class="ruler" style="margin-top:10pt"></div>
+      <p id="keyboardShortcuts">
+	Play/Pause: Spacebar, Increase Tempo: Right Arrow, Decrease Tempo: Left Arrow
+      </p>
+    </div>
+  </center>
+  <script>
+    document.getElementById("tempoSlider").value="120";
+  </script>
+</body>

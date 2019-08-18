@@ -1,0 +1,52 @@
+#tempoLabel {
+    font-size: 24pt;
+    float: left;
+    width: 116pt;
+    height: 27pt;
+    vertical-align: center;
+    test-align: center;
+    padding-top: 8pt;
+}
+
+#tempoSlider {
+    width: 100%;
+    margin-top: 12pt;
+}
+
+#metronomeBox {
+    max-width: 290pt;
+    text-align: center;
+}
+
+#keyboardShortcuts {
+    color: gray;
+}
+
+button {
+    background-color: #119040;
+    color: white;
+    border-radius: 4pt;
+    border: none;
+    margin: 2pt;
+    width: 50pt;
+}
+
+#playButton {
+    font-size: 16pt;
+    padding: 4pt;
+    width: 100%;
+    margin-bottom:-6pt;
+}
+
+.tempoButton {
+    font-size: 20pt;
+    text-align: center;
+    width: 40pt;
+    height: 40pt;
+}
+
+.ruler {
+    background-color: lightgray;
+    height: 2pt;
+    width: 100%;
+}
